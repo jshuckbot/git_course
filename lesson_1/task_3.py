@@ -21,3 +21,8 @@ def guess_number(happy_number, number) -> tuple:
         return False, MSG_LESS
 
 
+def generate_number() -> int:
+    return randint(LOWER_LIMIT, UPPER_LIMIT)
+
+
+
