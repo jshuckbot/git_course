@@ -17,3 +17,19 @@ def is_prime(number) -> str:
     return MSG_PRIME
 
 
+def check_range_number(number) -> bool:
+    """Проверяет лежит ли число в диапазоне"""
+    return True if number in range(RANGE) else False
+
+
+def input_number() -> int:
+    """Вводит число"""
+    try:
+        number = int(input(MSG_INPUT_NUMBER))
+
+    except ValueError:
+        return input_number()
+
+    return number if check_range_number(number) else input_number()
+
+
