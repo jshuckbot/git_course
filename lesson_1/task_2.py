@@ -33,3 +33,11 @@ def input_number() -> int:
     return number if check_range_number(number) else input_number()
 
 
+def main() -> None:
+    """Основная функция"""
+    number = input_number()
+    print(is_prime(number))
+
+
+if __name__ == '__main__':
+    main()
